@@ -52,18 +52,22 @@ class calculator {
                   this.updateScreen(operationValue, operation, current, previous);
                     break;
                     case "*":
-                      operationValue = previous + current;
+                      operationValue = previous / current;
                       this.updateScreen(operationValue, operation, current, previous);
                         break;
                         case "DEL":
-                          this.processDelOoperator();
+                          this.processDelOperator();
                             break;
-                            case "C":
-                              this.processClearOoperator();
+                            case "CE":
+                              this.processClearCurrentOperator();
                                 break;
-                                case "=":
-                              this.processEqualOperator();
-                                break;
+                                case "C":
+                                  this.processClearOperator();
+                                  break;
+                                    case "=":
+                                    this.processEqualOperator();
+                                     break;
+                                
         default:
             return;
     }
@@ -107,17 +111,17 @@ class calculator {
  }  
 
  //Delete the last digit
- processDelOoperator() {
+ processDelOperator() {
    this.currentOperationText.innerText = this.currentOperationText.innerText.slice(0, -1);
  }
 
  // Clear current operation
- processClearCurrentOoperator() {
+ processClearCurrentOperator() {
    this.currentOperationText.innerText = "";
 }
 
  // Clear all operation
-processClearOoperator() {
+processClearOperator() {
   this.currentOperationText.innerText = "";
   this.previousOperationText.innerText = "";
 }
