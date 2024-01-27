@@ -48,11 +48,11 @@ class calculator {
               operationValue = previous + current;
               this.updateScreen(operationValue, operation, current, previous);
                 break;
-                case "/":
+                case "*":
                   operationValue = previous + current;
                   this.updateScreen(operationValue, operation, current, previous);
                     break;
-                    case "*":
+                    case "/":
                       operationValue = previous / current;
                       this.updateScreen(operationValue, operation, current, previous);
                         break;
@@ -101,7 +101,7 @@ class calculator {
  // Change math operation
  chengeOperation(operation) {
 
-  const mathOperations = ["*", "/", "+", "-"]
+  const mathOperations = ["*", "-", "+", "/"]
 
   if(!mathOperations.includes(operation)) {
     return;
