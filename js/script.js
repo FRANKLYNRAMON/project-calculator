@@ -11,6 +11,7 @@ class calculator {
 
    //Add digit to calculator screen
    addDigit(digit) {
+    console.log(digit);
     //Check if current operation already a dot
     if(digit === "." && this.currentOperationText.innerText.includes(".")) {
         return;
