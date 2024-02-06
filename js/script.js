@@ -45,11 +45,11 @@ class calculator {
           this.updateScreen(operationValue, operation, current, previous);
             break;
             case "-":
-              operationValue = previous + current;
+              operationValue = previous - current;
               this.updateScreen(operationValue, operation, current, previous);
                 break;
                 case "*":
-                  operationValue = previous + current;
+                  operationValue = previous * current;
                   this.updateScreen(operationValue, operation, current, previous);
                     break;
                     case "/":
